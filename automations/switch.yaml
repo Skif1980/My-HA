@@ -1,0 +1,85 @@
+- id: '1740237282367'
+  alias: 17:30 on vacuum
+  description: ''
+  triggers:
+  - trigger: time
+    at: '17:30:00'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: c928f26a0092f103851c4d1e2da5151d
+        entity_id: e09c8aed9461202f495b9e9f2293f9e5
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: c928f26a0092f103851c4d1e2da5151d
+        entity_id: e09c8aed9461202f495b9e9f2293f9e5
+        domain: switch
+  mode: single
+- id: '1740237353300'
+  alias: 23:00 off vacuum
+  description: ''
+  triggers:
+  - trigger: time
+    at: '23:00:00'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: c928f26a0092f103851c4d1e2da5151d
+        entity_id: e09c8aed9461202f495b9e9f2293f9e5
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: c928f26a0092f103851c4d1e2da5151d
+        entity_id: e09c8aed9461202f495b9e9f2293f9e5
+        domain: switch
+  mode: single
+  
+- id: '1742497536624'
+  alias: 23:00 on usb
+  description: ''
+  triggers:
+  - trigger: time
+    at: '23:00:00'
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: a3eb4b1ec327b9b3f90050ae3048ac79
+        entity_id: 62eaf81b8358e1688583d97b0795af38
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: a3eb4b1ec327b9b3f90050ae3048ac79
+        entity_id: 62eaf81b8358e1688583d97b0795af38
+        domain: switch
+  mode: single
+- id: '1742497637786'
+  alias: 08:00 off usb
+  description: ''
+  triggers:
+  - trigger: time
+    at: 08:00:00
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: a3eb4b1ec327b9b3f90050ae3048ac79
+        entity_id: 62eaf81b8358e1688583d97b0795af38
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: a3eb4b1ec327b9b3f90050ae3048ac79
+        entity_id: 62eaf81b8358e1688583d97b0795af38
+        domain: switch
+  mode: single
