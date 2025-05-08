@@ -1,0 +1,139 @@
+- id: '1679941762211'
+  alias: 10:00 5500К
+  description: ''
+  trigger:
+  - platform: time
+    at: '10:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 5500
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762212'
+  alias: 12:00 5000К
+  description: ''
+  trigger:
+  - platform: time
+    at: '12:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 5000
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762213'
+  alias: 14:00 4500К
+  description: ''
+  trigger:
+  - platform: time
+    at: '14:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 4500
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762214'
+  alias: 16:00 4000К
+  description: ''
+  trigger:
+  - platform: time
+    at: '16:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 4000
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762215'
+  alias: 18:00 3500К
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 3500
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762216'
+  alias: 20:00 3000К
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 3000
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
+
+- id: '1679941762242'
+  alias: 22:00 2500К
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 84da01b847646fe77b5a1465c664e5dc
+    entity_id: light.ec4d3ed1596f_light
+    domain: light
+  action:
+  - service: light.turn_on
+    data:
+      kelvin: 2500
+    target:
+      device_id: 84da01b847646fe77b5a1465c664e5dc
+  mode: single
