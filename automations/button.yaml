@@ -1,0 +1,235 @@
+- id: '1737919118026'
+  alias: on\off notebook monitor
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 89899cf6cab21c2f5590d3d1838d0390
+    type: action
+    subtype: 2_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: b57e255df781c5bd794ea3f08410bc3b
+        entity_id: a429aaee19701274282c882190bd62c5
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: b57e255df781c5bd794ea3f08410bc3b
+        entity_id: a429aaee19701274282c882190bd62c5
+        domain: switch
+      - type: turn_on
+        device_id: ec64ccbcb258a93da2441cfb0a7fc650
+        entity_id: b4dbad8371eb94f848e09f45d6b94227
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: b57e255df781c5bd794ea3f08410bc3b
+        entity_id: a429aaee19701274282c882190bd62c5
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: b57e255df781c5bd794ea3f08410bc3b
+        entity_id: a429aaee19701274282c882190bd62c5
+        domain: switch
+      - type: turn_off
+        device_id: ec64ccbcb258a93da2441cfb0a7fc650
+        entity_id: b4dbad8371eb94f848e09f45d6b94227
+        domain: switch
+  mode: single
+- id: '1737919273726'
+  alias: on\off pc audio
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 89899cf6cab21c2f5590d3d1838d0390
+    type: action
+    subtype: 3_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: fc0e6ac41099a5005a5dd11d39e2b899
+        entity_id: 9609af21714ce44d1aa1f97b58a9aaf8
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: fc0e6ac41099a5005a5dd11d39e2b899
+        entity_id: 9609af21714ce44d1aa1f97b58a9aaf8
+        domain: switch
+      - type: turn_on
+        device_id: 732c326d5604fb93907f17854f8c2781
+        entity_id: ef6f0bf9aefe1dba668130990deb9121
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: fc0e6ac41099a5005a5dd11d39e2b899
+        entity_id: 9609af21714ce44d1aa1f97b58a9aaf8
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: fc0e6ac41099a5005a5dd11d39e2b899
+        entity_id: 9609af21714ce44d1aa1f97b58a9aaf8
+        domain: switch
+      - type: turn_off
+        device_id: 732c326d5604fb93907f17854f8c2781
+        entity_id: ef6f0bf9aefe1dba668130990deb9121
+        domain: switch
+  mode: single
+
+- id: '1740079848086'
+  alias: on\off router ya midi
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 89899cf6cab21c2f5590d3d1838d0390
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_on
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_off
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+  mode: single
+
+- id: '1740080213892'
+  alias: off router ya midi tv box
+  description: ''
+  triggers:
+  - device_id: 15b6d5ba6def166fc60f58cbf907ef16
+    domain: xiaomi_gateway3
+    type: action
+    trigger: device
+    state: button_4_single
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_off
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+      - type: turn_off
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+  mode: single
+
+- id: '1740080418508'
+  alias: on\off tv box
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 89899cf6cab21c2f5590d3d1838d0390
+    type: action
+    subtype: 4_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+  mode: single
+
+- id: '1740080843542'
+  alias: on\off mobile
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6fafc31c80a6a807e054f88bdec44695
+    type: action
+    subtype: single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: 5c599b4bfab08200ae21792af70bee8a
+        entity_id: b577cbad7932e1e8fe4d33de577d2995
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: 5c599b4bfab08200ae21792af70bee8a
+        entity_id: b577cbad7932e1e8fe4d33de577d2995
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 5c599b4bfab08200ae21792af70bee8a
+        entity_id: b577cbad7932e1e8fe4d33de577d2995
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 5c599b4bfab08200ae21792af70bee8a
+        entity_id: b577cbad7932e1e8fe4d33de577d2995
+        domain: switch
+  mode: single
