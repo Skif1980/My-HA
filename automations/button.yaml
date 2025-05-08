@@ -85,83 +85,6 @@
         domain: switch
   mode: single
 
-- id: '1740079848086'
-  alias: on\off router ya midi
-  description: ''
-  triggers:
-  - domain: mqtt
-    device_id: 89899cf6cab21c2f5590d3d1838d0390
-    type: action
-    subtype: 1_single
-    trigger: device
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: device
-        type: is_off
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      sequence:
-      - type: turn_on
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      - type: turn_on
-        device_id: 62a7dc658baaf62df9436b8742a3a17b
-        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
-        domain: switch
-    - conditions:
-      - condition: device
-        type: is_on
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      sequence:
-      - type: turn_off
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      - type: turn_off
-        device_id: 62a7dc658baaf62df9436b8742a3a17b
-        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
-        domain: switch
-  mode: single
-
-- id: '1740080213892'
-  alias: off router ya midi tv box
-  description: ''
-  triggers:
-  - device_id: 15b6d5ba6def166fc60f58cbf907ef16
-    domain: xiaomi_gateway3
-    type: action
-    trigger: device
-    state: button_4_single
-  conditions: []
-  actions:
-  - choose:
-    - conditions:
-      - condition: device
-        type: is_on
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      sequence:
-      - type: turn_off
-        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
-        entity_id: 3e4e9e148c1f5edc30218528837f3e15
-        domain: switch
-      - type: turn_off
-        device_id: 62a7dc658baaf62df9436b8742a3a17b
-        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
-        domain: switch
-      - type: turn_off
-        device_id: 504d5210c05671558a619bac1ba96a29
-        entity_id: 30052964254f35d5d2753f409ffbd591
-        domain: switch
-  mode: single
-
 - id: '1740080418508'
   alias: on\off tv box
   description: ''
@@ -231,5 +154,94 @@
       - type: turn_off
         device_id: 5c599b4bfab08200ae21792af70bee8a
         entity_id: b577cbad7932e1e8fe4d33de577d2995
+        domain: switch
+  mode: single
+  
+- id: '1740079848086'
+  alias: on\off cisco tp-link ya midi
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 89899cf6cab21c2f5590d3d1838d0390
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_on
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+      - type: turn_on
+        device_id: 54dbf2d42e8c33e1811feb2baf5c6441
+        entity_id: b87740d14fb2b7bea1ca9c33486fd86c
+        domain: switch
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_off
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+      - type: turn_off
+        device_id: 54dbf2d42e8c33e1811feb2baf5c6441
+        entity_id: b87740d14fb2b7bea1ca9c33486fd86c
+        domain: switch
+  mode: single
+  
+- id: '1740080213892'
+  alias: off cisco tp-link ya midi tv box
+  description: ''
+  triggers:
+  - device_id: 15b6d5ba6def166fc60f58cbf907ef16
+    domain: xiaomi_gateway3
+    type: action
+    trigger: device
+    state: button_4_single
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: device
+        type: is_on
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      sequence:
+      - type: turn_off
+        device_id: 83a7588af6e7658d5ef6f3bb9ceab170
+        entity_id: 3e4e9e148c1f5edc30218528837f3e15
+        domain: switch
+      - type: turn_off
+        device_id: 62a7dc658baaf62df9436b8742a3a17b
+        entity_id: 77681e1f1a47d3b0d609b9e7d6f80600
+        domain: switch
+      - type: turn_off
+        device_id: 504d5210c05671558a619bac1ba96a29
+        entity_id: 30052964254f35d5d2753f409ffbd591
+        domain: switch
+      - type: turn_off
+        device_id: 54dbf2d42e8c33e1811feb2baf5c6441
+        entity_id: b87740d14fb2b7bea1ca9c33486fd86c
         domain: switch
   mode: single
